@@ -1,0 +1,40 @@
+<body>
+    <h1>User Management</h1>
+
+<h2>Add User</h2>
+<div class="register">
+    <a href="http://localhost:4200/manage/register">Register</a>
+</div>
+<form (submit)="addUser()">
+  <input type="text" [(ngModel)]="username" name="username" placeholder="Username"  required />
+  <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required/>
+  <input type="passwordInputType" [(ngModel)]="password" name="password" placeholder="Password" required />
+  <button type="submit">Add User</button>
+</form>
+
+
+
+<h2>User List</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users; let i = index">
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.passwordHidden ? '********' : user.password }}</td>
+      <td>
+        <button (click)="togglePasswordVisibility(i)">Toggle Password</button>
+        <button (click)="deleteUser(i)">Delete</button>
+    </td>
+    </tr>
+  </tbody>
+</table>
+
+</body>

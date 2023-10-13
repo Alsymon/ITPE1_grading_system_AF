@@ -1,0 +1,45 @@
+$color: #754668;
+$color2: #ffbf00;
+$color3: #4DAA57;
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+.topnav {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $color3;
+    overflow-x: hidden;
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: $color3;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+
+.topnav .topnav-home a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+
+    transition: text-shadow 0.3s ease;
+    &:hover{
+    color: $color2;
+    }
+}
+.topnav .topnav-right{
+    color: #fff;
+    text-align: right;
+}
