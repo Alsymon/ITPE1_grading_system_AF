@@ -1,11 +1,26 @@
-<div class="dashboard">
-    <div class="header">
-      <h1>Dashboard</h1>
-      </div>
-      
-<div class="card">
-    <app-card name = "Randol Pipol"
-          position = "Dean"
-          company = "Wesleyan"
->    
-</app-card>
+<h1>Dashboard</h1>
+<div class="container">
+  <div class="card">
+    <app-card-small class="main" 
+    *ngFor="let item of cardData"
+    title="{{item.title}}"
+    value="{{item.value}}"
+    content="{{item.content}}"
+    link="{{item.link}}"
+    ></app-card-small>
+  </div>
+<div class="card-sub">
+    <app-card-small  class="sub"
+    *ngFor="let item of Subject"
+    title="{{item.title}}"
+    content="{{item.content}}"
+    ></app-card-small>
+  </div>
+    <div class="card-sub2">
+    <app-card-small class="sub"
+    *ngFor="let item of Subject2"
+    title="{{item.title}}"
+    content="{{item.content}}"
+    ></app-card-small>
+  </div> 
+</div>

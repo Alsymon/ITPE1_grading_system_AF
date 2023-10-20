@@ -1,9 +1,14 @@
 <body>
+  <app-button
+  text = "{{buttonText}}"
+  btnClass="btn-btn-primary"
+  > 
+  </app-button>
     <h1>User Management</h1>
 
 <h2>Add User</h2>
 <div class="register">
-    <a href="http://localhost:4200/manage/register">Register</a>
+    <a href="http://localhost:4200/registration">Register</a>
 </div>
 <form (submit)="addUser()">
   <input type="text" [(ngModel)]="username" name="username" placeholder="Username"  required />

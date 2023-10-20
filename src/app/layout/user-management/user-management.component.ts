@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-management.component.scss']
 })
 export class UserManagementComponent {
+  buttonText: string = "I'm inside typescript";
   username: string = '';
   email: string = '';
   password: string = '';
